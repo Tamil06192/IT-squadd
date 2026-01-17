@@ -608,28 +608,56 @@ footer {
 
     /* Dashboard-specific mobile optimizations */
     .dashboard-page header .container {
+        flex-direction: row;
         flex-wrap: wrap;
-        gap: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
     }
 
     .dashboard-page nav {
-        order: 3;
+        order: 5;
         width: 100%;
     }
 
     .dashboard-page .user-profile {
-        order: 2;
-        margin-left: auto;
+        order: 4;
+        margin: 0 !important;
+    }
+
+    .dashboard-page .user-profile span {
+        display: inline;
+        order: 3;
     }
 
     .dashboard-page .controls {
+        order: 1;
+        margin: 0 !important;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .dashboard-page .controls #rtl-toggle {
+        order: 1;
+    }
+
+    .dashboard-page .controls #theme-toggle {
         order: 2;
-        margin-left: 0 !important;
+    }
+
+    .dashboard-page .controls #menu-toggle {
+        order: 3;
+    }
+
+    .dashboard-page .controls #sidebar-toggle {
+        order: 4;
     }
 
     .dashboard-page .logo {
-        order: 1;
+        order: 0;
         font-size: 1.2rem;
+        width: auto;
     }
 }
 
@@ -1156,6 +1184,12 @@ footer {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    padding-top: 0 !important;
+}
+
+.dashboard-page header {
+    position: sticky;
+    top: 0;
 }
 
 .dashboard-container {
